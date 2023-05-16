@@ -1,1 +1,6 @@
-<h3>server component added in another comp</h3>
+<h3>server id is {{ serverId }} and {{ serverStatus }}</h3>
+<button class="btn btn-danger" (click)="clickevent()">button</button>
+<input type="text" class="form-control" (input)="changename($event)" />
+<input type="text" class="form-control my-3" [(ngModel)] = "username" />
+<p>{{ username }}</p>
+
