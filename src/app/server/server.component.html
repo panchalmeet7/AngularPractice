@@ -1,6 +1,16 @@
-<h3>server id is {{ serverId }} and {{ serverStatus }}</h3>
+<h3
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: serverStatus === 'online' }"
+>
+  server id is {{ serverId }} and {{ serverStatus }}
+</h3>
 <button class="btn btn-danger" (click)="clickevent()">button</button>
-<input type="text" class="form-control" (input)="changename($event)" />
-<input type="text" class="form-control my-3" [(ngModel)] = "username" />
-<p>{{ username }}</p>
-
+<!-- <input type="text" class="form-control"
+ (input)="changename($event)" /> -->
+<input type="text" class="form-control my-3" [(ngModel)]="serverName" />
+<!-- <input type="text" class="form-control my-3" [(ngModel)]="username" />
+<p>{{ username }}</p> -->
+<p *ngIf="serverCreated">server is created {{ serverName }}</p>
+<ng-template #noServer>
+  <p>No server was cretaed!</p>
+</ng-template>

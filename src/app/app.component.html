@@ -1,12 +1,38 @@
 <div class="conatiner p-5">
   <div class="row">
-    <div class="col-6">
+    <div class="col-4">
       <h3>app component</h3>
       <app-warning-alert />
     </div>
-    <div class="col-6">
+    <div class="col-8">
       <!-- servers component-->
-      <app-server />
+      <app-server></app-server>
+
+      <!-- enable the btn if input has value and reset btn empty the input -->
+
+      <!-- <input type="text" class="form-control" [(ngModel)]="username" />
+      <button
+        class="btn btn-primary my-3"
+        [disabled]="username === ''"
+        (click)="username = ''"
+      >
+        reset
+      </button> -->
+
+      <!-- show hide toggle  -->
+
+      <button class="btn btn-primary" (click)="toggleSwitch()">
+        show hide
+      </button>
+      <p *ngIf="showPass">password toggle</p>
+      <p
+        class="p-1"
+        *ngFor="let item of log; let i = index"
+        [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'white' }"
+        [ngClass]="{ 'white-text': i >= 5 }"
+      >
+        {{ item }}
+      </p>
     </div>
   </div>
 </div>
