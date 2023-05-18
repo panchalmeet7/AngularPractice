@@ -18,12 +18,10 @@ export class ServerComponent{
     serverName = "servername";
     serverCreated = false;
     servers = ['servernames', 'servername 2'];
-
     // constructor()
     // {
     // setTimeout(() => {
     //     this.allowserverstatus = true;
-       
     // }, 2000);
     // }
     constructor(){
@@ -37,7 +35,6 @@ export class ServerComponent{
         //var meets =  this.serverId = 7? '19': '563485';
         //this.serverStatus = "online" ? this.serverStatus = "offline" : this.serverStatus = "online"
         //console.log(this.serverStatus);
-        
     }
 
     changename(event: any){
